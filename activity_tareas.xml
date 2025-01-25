@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".TareasActivity">
+
+    <!-- iconos superiores -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/black">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/logoText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:text="Udla Access"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:layout_marginTop="19dp" />
+
+        <!-- Iconos -->
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Notificaciones"
+            android:src="@drawable/notificacion" />
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/moreoptions"
+            android:contentDescription="Menú" />
+    </LinearLayout>
+
+    <!-- Título de tareas -->
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tareas"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Lista de tareas -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Título para "Tareas Actuales" -->
+            <TextView
+                android:id="@+id/currentTasksHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Tareas Actuales"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <!-- Lista de tareas actuales -->
+            <LinearLayout
+                android:id="@+id/currentTasksContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Aquí se cargarán dinámicamente los tasks actuales -->
+            </LinearLayout>
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="#444444" />
+
+            <!-- Título para "Anteriores Tasks" -->
+            <TextView
+                android:id="@+id/previousTasksHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Anteriores"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <!-- Lista de tareas anteriores -->
+            <LinearLayout
+                android:id="@+id/previousTasksContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Aquí se cargarán dinámicamente los tasks anteriores -->
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

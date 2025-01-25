@@ -1,0 +1,163 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="top|start" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Udla Access"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="90dp"
+        android:layout_gravity="top|start"/>
+
+    <!-- Mensaje de bienvenida -->
+    <TextView
+        android:id="@+id/bienvenidoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido!"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="top|start"/>
+
+    <!-- Imagen estática -->
+    <ImageView
+        android:id="@+id/staticImage"
+        android:layout_width="match_parent"
+        android:layout_height="183dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="150dp"
+        android:contentDescription="Imagen estática"
+        android:src="@drawable/image1" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="375dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Botón 1"
+        android:src="@drawable/button1" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="340dp"
+        android:text="Próxima Clase"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="500dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Botón 3"
+        android:src="@drawable/button3" />
+
+    <TextView
+        android:id="@+id/descriptionText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="470dp"
+        android:text="Tareas Pendientes"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:id="@+id/backgroundRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="#1C1E1F">
+
+        <ImageButton
+            android:id="@+id/buttonLeft1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/home"
+            android:contentDescription="Botón 1"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+        <ImageButton
+            android:id="@+id/buttonLeft2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/tareas"
+            android:contentDescription="Botón 2"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="64dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+        <ImageButton
+            android:id="@+id/buttonCenter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/menu"
+            android:contentDescription="Botón 3"
+            android:layout_gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+        <ImageButton
+            android:id="@+id/buttonRight2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/codigo"
+            android:contentDescription="Botón 4"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="64dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+        <ImageButton
+            android:id="@+id/buttonRight1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/perfil"
+            android:contentDescription="Botón 5"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:padding="4dp" />
+
+    </FrameLayout>
+
+</FrameLayout>
+
+

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".MainActivity">
+
+    <!-- Logo e iconos superiores -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/logoText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:text="Udla Access"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintLeft_toRightOf="@id/logo"
+            app:layout_constraintTop_toTopOf="@id/logo" />
+
+        <!-- Iconos -->
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Notificaciones"
+            android:src="@drawable/notificacion" />
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/moreoptions"
+            android:contentDescription="Menú" />
+    </LinearLayout>
+
+    <!-- Título de tareas -->
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Horarios"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout" />
+
+    <!-- Pestañas de días de la semana -->
+    <LinearLayout
+        android:id="@+id/weekTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/taskTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/mondayTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lunes"
+            android:textColor="#FFFFFF"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/tuesdayTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Martes"
+            android:textColor="#FFFFFF"
+            android:background="#1E1E1E"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/wednesdayTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Miércoles"
+            android:textColor="#FFFFFF"
+            android:background="#1E1E1E"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/thursdayTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="Jueves"
+            android:background="#1E1E1E"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/fridayTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Viernes"
+            android:textColor="#FFFFFF"
+            android:background="#1E1E1E"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- Lista de elementos -->
+    <LinearLayout
+        android:id="@+id/elementsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/weekTabs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Elemento 1 -->
+        <LinearLayout
+            android:id="@+id/elementsContainer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/weekTabs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Botón con texto (Facultad + número de clase) -->
+
+            <!-- Detalles del elemento -->
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:text="Faltas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
